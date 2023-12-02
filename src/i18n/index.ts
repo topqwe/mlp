@@ -88,7 +88,7 @@ const messages = {
 const i18n = {
     globalInjection: true,
     legacy: false, // composition API
-    locale: localStorage.getItem('language') || 'zh-CN',
+    locale: localStorage.getItem('language') || 'zh_CN',
     messages,
     }
 export default createI18n(i18n);
