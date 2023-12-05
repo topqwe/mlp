@@ -211,7 +211,7 @@ onMounted(() => {
   .xiazai-button {
     width: 100%;
     margin-top: 20px;
-    background: #1552F0;
+    background: var(--cp-primary);
     border-radius: 4px;
     height: 44px;
     font-style: normal;
@@ -250,7 +250,7 @@ onMounted(() => {
 
         /* 审核中 */
 
-        color: #1552F0;
+        color: var(--cp-primary);
       }
     }
 
@@ -306,7 +306,7 @@ onMounted(() => {
       font-weight: 400;
       font-size: 16px;
       /* identical to box height */
-      background: #1552F0;
+      background: var(--cp-primary);
       text-align: center;
 
       color: #FFFFFF;

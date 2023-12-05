@@ -54,7 +54,7 @@ import vnavibar from "../../components/vnavibar.vue"
       margin-top: 20px;
       width: 100%;
       height: 44px;
-      background: #1552F0;
+      background: var(--cp-primary);
       border-radius: 4px;
       font-style: normal;
       font-weight: 400;

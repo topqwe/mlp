@@ -1,14 +1,20 @@
 <template>
   <div class="rechargeList">
-    <van-nav-bar
+    <!-- <van-nav-bar
         fixed
         :title="$t('')"
         :right-text="$t('记录')"
         @click-right="onClickRight"
         left-arrow
         @click-left="onClickLeft"
-    />
-    <!-- <div style="width: 100%;height: 46px;"></div> -->
+    /> -->
+    <vnavibar
+      title=''
+      right-text='记录'
+      @click-right="$router.push('/rechRecord')"
+    ></vnavibar>
+
+    <div style="width: 100%;height: 46px;"></div>
 
     <img style="width: 100%;" v-if="$i18n.locale==='en_US'" src="../../../assets/image/me/Invite_banner_eng.png">
       <img style="width: 100%;" v-else src="../../../assets/image/me/Invite_banner_ch.png">
@@ -38,27 +44,27 @@
       </div>
     </router-link>
   </div>
+
+  
 </template>
 
 <script lang="ts">
 import { useRoute,useRouter } from "vue-router"; 
+// import Vnavibar from "../../../components/vnavibar.vue";
 export default {
-  setup() {
-    const router = useRouter()
-    const onClickLeft=()=> {
-      history.go(-1)
-    }
-    const onClickRight=() => {
-      router.push('/rechRecord')
-    }
-    return {
-      onClickLeft,
-      onClickRight
-    }
-  },
-  methods: {
-    
-  }
+    setup() {
+        const router = useRouter();
+        const onClickLeft = () => {
+            history.go(-1);
+        };
+        const onClickRight = () => {
+            router.push('/rechRecord');
+        };
+        return {
+            onClickLeft,
+            onClickRight
+        };
+    }, 
 }
 </script>
 <style lang="scss" scoped>
@@ -108,7 +114,4 @@ export default {
     }
   }
 }
-</style>
-<style>
-
-</style>
+</style> 

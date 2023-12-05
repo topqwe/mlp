@@ -830,13 +830,13 @@ requestDummy().then((res: any) => {
 
         .ProgressHight {
           height: 8px;
-          background: #1552F0;
+          background: var(--cp-primary);
           border-radius: 27px;
         }
 
         .ProgressGrey {
           height: 8px;
-          background: #999999;
+          background: var(--cp-dark);
           border-radius: 27px;
         }
       }
@@ -880,13 +880,14 @@ requestDummy().then((res: any) => {
       }
 
       .BtnHight {
-        background: #1552F0;
+        background: var(--cp-primary);
       }
 
       .BtnGrey {
-        background: #999999;
+        background: var(--cp-dark);
       }
     }
+
   }
 
 
@@ -1116,7 +1117,7 @@ requestDummy().then((res: any) => {
       width: 100%;
       height: 44px;
       /* 主题色 */
-      background: #1552F0;
+      background: var(--cp-primary);
       border-radius: 4px;
       font-style: normal;
       font-weight: 400;
@@ -1161,7 +1162,7 @@ requestDummy().then((res: any) => {
 /*  opacity: 0.6;*/
 /*}*/
 /*.van-swipe__indicator--active{*/
-/*  !*background: #1552F0!important;*!*/
+/*  !*background: var(--cp-primary)!important;*!*/
 /*  background: rgba(0, 0, 0, 0.6)!important;*/
 /*}*/
 </style>

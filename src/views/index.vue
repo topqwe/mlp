@@ -17,9 +17,7 @@
 
 <!-- <tabbar></tabbar>  -->
 <vtabbar></vtabbar>
-<!-- <vtabbar :idx="state.idx" @change="change"></vtabbar> -->
-      <!-- <v-navbar :idx="state.idx" @change="change" ></v-navbar>  -->
-        
+
     </div>
   
   </div>
@@ -34,7 +32,7 @@ import vtabbar from "../components/vtabbar.vue"
 import navibar from "../components/navibar.vue"  
 import { useRoute,useRouter } from "vue-router"; 
 export default ({
-  name: "index",
+  // name: "index",
   setup () {
     const route = useRoute();
     const router = useRouter();
@@ -88,14 +86,14 @@ export default ({
     
     })
 
-    watch(()=>route,(newVal,oldVal)=>{
-      //指定对象属性
-      if (newVal.meta.index >= 0) {
-          state.idx = newVal.meta.index;
-          localStorage.setItem("tabIndex", state.idx as unknown as string);
-      }
+  //   watch(()=>route,(newVal,oldVal)=>{
+  //     //指定对象属性
+  //     if (newVal.meta.index >= 0) {
+  //         state.idx = newVal.meta.index;
+  //         localStorage.setItem("tabIndex", state.idx as unknown as string);
+  //     }
 
-   },{deep:true})
+  //  },{deep:true})
 
     return {
       state,

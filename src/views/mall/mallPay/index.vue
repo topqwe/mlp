@@ -67,7 +67,7 @@
         <div class="bao1">{{ $t('支付积分') }}</div>
         <div class="bao2">{{(listDatas.prize*input2).toFixed(0)}}</div>
       </div>
-      <div v-if="active==2" style="color: #1552F0;font-size: 12px; text-align: left;">
+      <div v-if="active==2" style="color: var(--cp-primary);font-size: 12px; text-align: left;">
         {{ $t('商品比例') }}：{{listDatas.scale}}{{ $t('积分') }} = 1A</div>
       
       <div v-if="active==1" class="wc-bj" @click="actionEvent1">
@@ -339,7 +339,7 @@ export default {
 
           /* 审核中 */
 
-          color: #1552F0;
+          color: var(--cp-primary);
 
         }
       }
@@ -374,7 +374,7 @@ export default {
         font-weight: 400;
         font-size: 16px;
         line-height: 14px;
-        color: #1552F0;
+        color: var(--cp-primary);
       }
     }
 
@@ -421,7 +421,7 @@ export default {
         font-size: 14px;
         line-height: 16px;
         text-align: right;
-        color: #1552F0;
+        color: var(--cp-primary);
       }
 
       .bao3 {
@@ -454,7 +454,7 @@ export default {
     line-height: 44px;
     /* identical to box height, or 100% */
     text-align: center;
-    background: #1552F0;
+    background: var(--cp-primary);
     border-radius: 4px;
     color: #FFFFFF;
   }

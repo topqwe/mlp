@@ -368,7 +368,7 @@ export default {
       color: #333333;
     }
     .tab-button-show2{
-      background: #1552F0;
+      background: var(--cp-primary);
       font-style: normal;
       font-weight: 400;
       font-size: 12px;
@@ -398,14 +398,14 @@ export default {
     font-size: 12px;
     line-height: 14px;
     /* identical to box height */
-    color: #1D91FF;
+    color: var(--cp-primary);
     margin-top: 10px;
   }
   .login-btn{
     margin-top: 20px;
     // width: 345px;
     height: 44px;
-    background: #1552F0;
+    background: var(--cp-primary);
     border-radius: 4px;
     font-style: normal;
     font-weight: 400;

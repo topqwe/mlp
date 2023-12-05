@@ -58,11 +58,11 @@
             clearable>
         </el-input>
       </div>
-      <div style="color: #999999;font-size: 12px;margin-top: 8px;">{{$t('得到')}} <span style="color: #1552F0;margin-right: 2px;">{{ (input2*1).toFixed(1) }}</span>AA,
+      <div style="color: #999999;font-size: 12px;margin-top: 8px;">{{$t('得到')}} <span style="color: var(--cp-primary);margin-right: 2px;">{{ (input2*1).toFixed(1) }}</span>AA,
         <span v-if="listDatas.type==1&&listDatas.type==2">{{ $t('每天') }}</span>
-        <span v-else>{{ $t('每小时') }}</span>{{ $t('可收益') }}<span style="color: #1552F0;margin-right: 2px;">{{ (listDatas.bonusRate*input2).toFixed(1) }}</span>AA,
+        <span v-else>{{ $t('每小时') }}</span>{{ $t('可收益') }}<span style="color: var(--cp-primary);margin-right: 2px;">{{ (listDatas.bonusRate*input2).toFixed(1) }}</span>AA,
         {{ $t('可得积分') }}
-        <span style="color: #1552F0;margin-right: 2px;">{{ (listDatas.pointRate*input2).toFixed(0) }}</span>
+        <span style="color: var(--cp-primary);margin-right: 2px;">{{ (listDatas.pointRate*input2).toFixed(0) }}</span>
         {{ $t('积分') }}</div>
       <div class="wc-bj" @click="submmitEvent">
         {{ $t('立即') }}
@@ -313,7 +313,7 @@ export default {
 
           /* 审核中 */
 
-          color: #1552F0;
+          color: var(--cp-primary);
 
         }
       }
@@ -345,7 +345,7 @@ export default {
         font-weight: 400;
         font-size: 16px;
         line-height: 14px;
-        color: #1552F0;
+        color: var(--cp-primary);
       }
     }
 
@@ -408,7 +408,7 @@ export default {
     margin-top: 10px;
     width: 100%;
     height: 86px;
-    background: #1552F0;
+    background: var(--cp-primary);
     padding: 15px;
     box-sizing: border-box;
     border-radius: 4px;
@@ -429,7 +429,7 @@ export default {
       font-weight: 400;
       font-size: 12px;
       line-height: 26px;
-      color: #1552F0;
+      color: var(--cp-primary);
     }
     .yu-e{
       display: flex;
@@ -471,7 +471,7 @@ export default {
     line-height: 44px;
     /* identical to box height, or 100% */
     text-align: center;
-    background: #1552F0;
+    background: var(--cp-primary);
     border-radius: 4px;
     color: #FFFFFF;
   }

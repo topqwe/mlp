@@ -99,7 +99,7 @@ export default {
       margin-top: 30px;
       width: 100%;
       height: 44px;
-      background: #1552F0;
+      background: var(--cp-primary);
       border-radius: 4px;
       font-style: normal;
       font-weight: 400;
@@ -110,7 +110,7 @@ export default {
       color: #FFFFFF;
     }
     .JumpBtn{
-      border: 1px solid #1552F0;
+      border: 1px solid var(--cp-primary);
       border-radius: 4px;
       margin-top: 15px;
       width: 100%;
@@ -121,7 +121,7 @@ export default {
       line-height: 42px;
       /* identical to box height, or 100% */
       text-align: center;
-      color: #1552F0;
+      color: var(--cp-primary);
     }
   }
 }

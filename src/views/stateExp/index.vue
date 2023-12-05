@@ -41,7 +41,7 @@ import { showToast,showLoadingToast,
 // const add = () => {
 //   store.commit("addNum");
 //   state.num = store.state.num;
-//   state.num > 20 ? (state.color = "pink") : (state.color = "#ccc");
+//   state.num > 20 ? (state.color = "var(--cp-primary)") : (state.color = "#ccc");
 // };
 // article().then((res: any) => {
 //   console.log(res);
@@ -67,7 +67,7 @@ const store = useStore();
 const add = () => { 
   proxy?.$store.commit("addNum");
 state.num = proxy?.$store.state.num;
-state.num > 20 ? (state.color = "pink") : (state.color = "#ccc");
+state.num > 20 ? (state.color = "var(--cp-primary)") : (state.color = "#ccc");
 };
 
 // article().then((res: any) => {

@@ -60,22 +60,24 @@
             <div class="k-title">CCC</div>
           </div>
         </div>
-        <div class="jindu">
-          <div style="flex: 1;margin-right: 15px;">
-            <div class="jindu-t">
-              <div :class="item.isSellOut==1?'xuanzhong2':'xuanzhong'"
-                   :style="'width:'+(item.progress*100).toFixed(2)+'%'"></div>
-            </div>
-            <div class="jindu-title">
-              <div class="t1">Progress</div>
-              <div class="t2">{{ (item.progress * 100).toFixed(2) }}%</div>
-            </div>
+        
+        
+        <div class="ProgressView">
+        <div style="flex: 1;margin-right: 15px;">
+          <div class="Progress">
+            <div :class="item.isSellOut==1?'ProgressGrey':'ProgressHight'"
+                 :style="'width:'+(item.progress*100).toFixed(2)+'%'"></div>
           </div>
-          <div class="tj" :class="item.isSellOut==1?'tj-hui':'tj-lan'">
-
-            {{item.isSellOut==1?$t('已售完'):$t('立即参与')}}
+          <div class="ProgressTitle">
+            <div class="t1">Progress</div>
+            <div class="t2">{{ (item.progress * 100).toFixed(2) }}%</div>
           </div>
         </div>
+        <div class="Btn" :class="(item.isSellOut==1?'BtnGrey':'BtnHight')">
+          {{ $t('立即参与') }}
+        </div>
+      </div>
+
       </div>
 
         </van-list>
@@ -495,34 +497,34 @@ state.listDatas = [];
       }
     }
 
-    .jindu {
+    .ProgressView {
       margin-top: 15px;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: flex-start;
 
-      .jindu-t {
+      .Progress {
         margin-top: 2px;
         width: 140px;
         height: 8px;
         background: #EEEEEE;
         border-radius: 27px;
 
-        .xuanzhong {
+        .ProgressHight {
           height: 8px;
-          background: #1552F0;
+          background: var(--cp-primary);
           border-radius: 27px;
         }
 
-        .xuanzhong2 {
+        .ProgressGrey {
           height: 8px;
-          background: #999999;
+          background: var(--cp-dark);
           border-radius: 27px;
         }
       }
 
-      .jindu-title {
+      .ProgressTitle {
         width: 140px;
         margin-top: 8px;
         display: flex;
@@ -543,7 +545,7 @@ state.listDatas = [];
         }
       }
 
-      .tj {
+      .Btn{
         width: 96px;
         height: 36px;
         font-style: normal;
@@ -560,12 +562,12 @@ state.listDatas = [];
         border-radius: 4px;
       }
 
-      .tj-lan {
-        background: #1552F0;
+      .BtnHight {
+        background: var(--cp-primary);
       }
 
-      .tj-hui {
-        background: #999999;
+      .BtnGrey {
+        background: var(--cp-dark);
       }
     }
   }

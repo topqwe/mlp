@@ -348,7 +348,7 @@ localStorage.setItem('taskActiveIndex',state.active?state.active:'0')
     margin: 10px 15px 0 15px;
     padding: 15px;
     box-sizing: border-box;
-    background: pink;
+    background: var(--cp-primary);
     border-radius: 4px;
     font-style: normal;
     font-weight: 400;
@@ -496,7 +496,7 @@ localStorage.setItem('taskActiveIndex',state.active?state.active:'0')
 
           /* 审核中 */
 
-          color: #1552F0;
+          color: var(--cp-primary);
 
         }
       }
@@ -523,7 +523,7 @@ localStorage.setItem('taskActiveIndex',state.active?state.active:'0')
         font-weight: 400;
         font-size: 16px;
         line-height: 14px;
-        color: #1552F0;
+        color: var(--cp-primary);
       }
     }
 
@@ -555,7 +555,7 @@ localStorage.setItem('taskActiveIndex',state.active?state.active:'0')
       .anniu {
         width: 100px;
         height: 40px;
-        background: #1552F0;
+        background: var(--cp-primary);
         border-radius: 4px;
         font-style: normal;
         font-weight: 400;

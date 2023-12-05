@@ -40,7 +40,7 @@
       <van-action-sheet v-model:show="isShowActionSheet" title="Exchange">
         <div class="content">
           <div class="t1">
-            {{ $t('当前比率') }}<span style="color: #1552F0;">1  ≈ {{ actionSheetData.prize }} {{
+            {{ $t('当前比率') }}<span style="color: var(--cp-primary);">1  ≈ {{ actionSheetData.prize }} {{
               actionSheetData.name
             }}</span>
           </div>
@@ -53,7 +53,7 @@
           <el-input
               placeholder="0.00"
               v-model="selectedInput">
-            <i slot="suffix" class="el-input__icon" style="margin-right: 10px;color: #1552F0;"
+            <i slot="suffix" class="el-input__icon" style="margin-right: 10px;color: var(--cp-primary);"
                @click="tapAllEvent">{{ $t('全部') }}</i>
           </el-input>
           <div class="tishi1">{{ $t('限额') }}：{{ actionSheetData.currency_symbol }}{{ actionSheetData.excMin }} - {{
@@ -531,7 +531,7 @@ export default {
         margin-left: 10px;
         width: 62px;
         height: 28px;
-        background: #1552F0;
+        background: var(--cp-primary);
         border-radius: 4px;
         font-style: normal;
         font-weight: 400;
@@ -584,7 +584,7 @@ export default {
 
     .x1 {
       color: #F6F6F6;
-      background: #1552F0;
+      background: var(--cp-primary);
     }
 
     .x2 {
@@ -656,7 +656,7 @@ export default {
     height: 44px;
     /* 主题色 */
 
-    background: #1552F0;
+    background: var(--cp-primary);
     border-radius: 4px;
     font-style: normal;
     font-weight: 400;

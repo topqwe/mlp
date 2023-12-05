@@ -265,7 +265,7 @@ export default {
   line-height: 34px;
   text-align: center;
   color: #FFFFFF;
-  background: #1552F0;
+  background: var(--cp-primary);
   border-radius: 45px;
 }
 </style>

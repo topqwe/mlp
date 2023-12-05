@@ -376,7 +376,7 @@ export default {
 
           /* 审核中 */
 
-          color: #1552F0;
+          color: var(--cp-primary);
 
         }
       }
@@ -402,7 +402,7 @@ export default {
         font-weight: 400;
         font-size: 16px;
         line-height: 14px;
-        color: #1552F0;
+        color: var(--cp-primary);
       }
     }
 
@@ -450,7 +450,7 @@ export default {
     .button{
       width: 100%;
       height: 100%;
-      background: #1552F0;
+      background: var(--cp-primary);
       border-radius: 4px;
       font-weight: 400;
       font-size: 16px;

@@ -94,7 +94,7 @@
       <router-link to="/transRecord">
         <div class="caidan-list">
           <img class="caidan-icon" src="../../assets/image/me/record.png"/>
-          <div class="caidan-neirong">{{ $t('记录') }}</div>
+          <div class="caidan-neirong">{{ $t('筛选记录') }}</div>
           <img src="../../assets/image/public/arrow_right.png" style="width: 20px;height: 20px;"/>
         </div>
       </router-link>
@@ -218,7 +218,7 @@ export default {
     
     width: 100%;
     // height: 100;
-    background-color: pink;
+    background-color: var(--cp-primary);
   //  background: url("../../assets/image/me/bg2.png" ) no-repeat;
     background-size: 100%;
 
@@ -349,10 +349,10 @@ export default {
     line-height: 33px;
     text-align: center;
     border-radius: 4px;
-    border: 1px solid #1552F0;
+    border: 1px solid var(--cp-primary);
     /* 审核中 */
 
-    color: #1552F0;
+    color: var(--cp-primary);
     margin-right: 10px;
   }
 
@@ -367,7 +367,7 @@ export default {
     text-align: center;
 
     /* 白色 */
-    background: #1552F0;
+    background: var(--cp-primary);
     border-radius: 4px;
     color: #FFFFFF;
 

@@ -345,7 +345,7 @@ export default {
   }
 
   .s2 {
-    background: #1552F0;
+    background: var(--cp-primary);
   }
 
   .s3 {

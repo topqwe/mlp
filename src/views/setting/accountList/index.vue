@@ -200,7 +200,7 @@ export default {
     margin-top: 20px;
     width: 100%;
     height: 44px;
-    border: 1px solid #1552F0;
+    border: 1px solid var(--cp-primary);
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -219,7 +219,7 @@ export default {
 
       /* 主题色 */
 
-      color: #1552F0;
+      color: var(--cp-primary);
       margin-left: 9px;
 
     }

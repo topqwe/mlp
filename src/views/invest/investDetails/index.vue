@@ -62,7 +62,7 @@
     </div>
     <div class="" style="width: 100%;height: 70px;"></div>
     <div class="bottomBtnLayout">
-      <div class="button" :class="'status1'" style="background: #1552F0;" @click="pushDetail(listDatas.id)" v-if="listDatas.isSellOut==0">
+      <div class="button" :class="'status1'" style="background: var(--cp-primary);" @click="pushDetail(listDatas.id)" v-if="listDatas.isSellOut==0">
         {{ $t('马上') }}</div>
       <div class="button" :class="'status2'"  v-else>{{ $t('已售完') }}</div>
     </div>
@@ -193,7 +193,7 @@ for (var i = 0; i < 3; i++) {
 
       /* 主题色 */
 
-      color: #1552F0;
+      color: var(--cp-primary);
       span{
         font-style: normal;
         font-weight: 400;
@@ -274,7 +274,7 @@ for (var i = 0; i < 3; i++) {
       border-radius: 27px;
       .jin-z{
         height: 8px;
-        background: #1552F0;
+        background: var(--cp-primary);
         border-radius: 27px;
       }
     }
@@ -350,7 +350,7 @@ for (var i = 0; i < 3; i++) {
     .button{
       width: 100%;
       height: 100%;
-      //background: #1552F0;
+      //background: var(--cp-primary);
       border-radius: 4px;
       font-weight: 400;
       font-size: 16px;

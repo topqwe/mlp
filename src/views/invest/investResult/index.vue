@@ -286,7 +286,7 @@ export default {
           color: #0ECB81;
         }
         .s2{
-          color: #1552F0;
+          color: var(--cp-primary);
         }
         .s3{
           color: #FF3E3E;

@@ -440,7 +440,7 @@ export default {
       width: 344px;
       height: 44px;
       /* 主题色 */
-      background: #1552F0;
+      background: var(--cp-primary);
       border-radius: 4px;
       font-style: normal;
       font-weight: 400;

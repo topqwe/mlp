@@ -462,7 +462,7 @@ const state = reactive({
     }
 
     .tab-button-show2 {
-      background: #1552F0;
+      background: var(--cp-primary);
       font-style: normal;
       font-weight: 400;
       font-size: 12px;
@@ -492,7 +492,7 @@ const state = reactive({
     font-weight: 400;
     font-size: 12px;
     line-height: 14px; 
-    color: #1D91FF;
+    color: var(--cp-primary);
     margin-top: 10px; 
   }
 
@@ -501,7 +501,7 @@ const state = reactive({
     // margin-right: 20px;
      padding-right: 0; 
     /* height: 44px; */
-    background: #1552F0;
+    background: var(--cp-primary);
     border-radius: 4px;
     font-style: normal;
     font-weight: 400;

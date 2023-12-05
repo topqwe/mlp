@@ -95,7 +95,7 @@ import vnavibar from "../../components/vnavibar.vue"
 
         /* 审核中 */
 
-        color: #1552F0;
+        color: var(--cp-primary);
       }
     }
     .wenben1{

@@ -49,8 +49,8 @@
 </template>
 <script lang="ts">
 import clipboard3 from 'vue-clipboard3' 
-import vnavibar from "../../../components/vnavibar.vue" 
-import { defineComponent,reactive, ref,toRefs,onMounted} from 'vue';
+// import vnavibar from "../../../components/vnavibar.vue" 
+// import { defineComponent,reactive, ref,toRefs,onMounted} from 'vue';
 import {  requestDummy } from "../../../api";
 import { showToast,showLoadingToast,
     showSuccessToast,showFailToast } from 'vant';
@@ -58,10 +58,10 @@ import { useStore } from "vuex";
 import { useRoute,useRouter } from "vue-router"; 
 import { useI18n } from 'vue-i18n' 
  
-export default defineComponent({
-  components: {  
-    vnavibar
-  }, 
+export default {
+  // components: {  
+  //   vnavibar
+  // }, 
   setup () {  
     const {toClipboard} = clipboard3()
     const { t, locale } = useI18n()
@@ -243,7 +243,7 @@ export default defineComponent({
     }
   },
   
-});
+}
 
  
 

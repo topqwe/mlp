@@ -1,5 +1,7 @@
 <template>
   <div class="transRecord">
+
+
     <van-nav-bar
         fixed
         :title="$t('记录')"
@@ -13,6 +15,19 @@
       </template>
     </van-nav-bar>
 
+    <!-- <vnavibar
+      title='记录'
+      right-text='筛选'
+      @click-right="onClickRight"
+    > -->
+
+    <!-- <div slot="right"><slot name="screen">默认内容</slot></div> -->
+    <!-- <van-icon name="filter-o" size="18" slot="right" /> -->
+    <!-- <template #right>
+        <van-icon name="filter-o" size="18" />
+      </template> -->
+
+  <!-- </vnavibar> -->
 
     <!-- <div style="width: 100%;height: 46px;"></div> -->
     <!-- <div class="nr"> -->
@@ -251,6 +266,9 @@ getPickDatas()
       
       state.page_no = 0
       state.finished = false;
+      document.body.scrollTop = 0
+      // firefox
+      document.documentElement.scrollTop = 0
       requestList()
       state.showPicker = false
       state.listDatas = [];

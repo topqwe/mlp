@@ -1,8 +1,8 @@
 <template>
-  <div class="rechargeOperate">
 
-    <van-stick fixed><vnavibar fixed title= ''/></van-stick>
-      
+  <div class="rechargeOperate">
+ 
+    
     <!-- <van-stick fixed>
       <van-nav-bar
         
@@ -15,8 +15,16 @@
       z-index="999"
     />
     </van-stick> -->
+    <!-- vnavibar -->
+    <!-- cp-nav-bar -->
+    <vnavibar
+      title=''
+      right-text='记录'
+      @click-right="$router.push('/rechRecord')"
+    ></vnavibar>  
     
     <div style="width: 100%;height: 46px;"></div>
+
     <div class="biaoti">{{ $t('网络') }}</div>
     <div class="duoxuan">
 <!--      <div class="xuan1 weixuan">111</div>-->
@@ -64,8 +72,12 @@
     <div class="tijiao">
       <div class="tijiao2" @click="submmitEvent">{{ $t('提交') }}</div>
     </div>
+
+
   </div>
 
+
+  
   <van-overlay :show="show" @click="show = false">
         <div class="wrapper">
           <!--        <div class="block" />-->
@@ -86,12 +98,9 @@
               @blur="showKeyboard = true"
           />
         </div>
-      </van-overlay>
-
-
+  </van-overlay>
 
  
-
 
 
 </template>
@@ -99,18 +108,15 @@
 <script lang="ts">
 import QRCode from 'qrcode'
 import clipboard3 from 'vue-clipboard3' 
-import vnavibar from "../../components/vnavibar.vue"
-import { defineComponent,reactive, ref,toRefs,onMounted,watch, watchEffect} from 'vue';
+// import vnavibar from "../../components/vnavibar.vue"
+// import { defineComponent,reactive, ref,toRefs,onMounted,watch, watchEffect} from 'vue';
 import { requestDummy, requestUploadFile } from "../../api";
 import { showToast,showLoadingToast,
     showSuccessToast,showFailToast, closeToast } from 'vant';
 import { useStore } from "vuex";
 import { useRoute,useRouter } from "vue-router"; 
 import { useI18n } from 'vue-i18n'  
-export default {
-  components: {
-    vnavibar,
-  },
+export default { 
   setup() {
     const router  = useRouter() 
     const {toClipboard} = clipboard3()
@@ -282,7 +288,7 @@ export default {
     const useqrcode=()=> {//生成二维码
       let canvas = document.getElementById('canvas')
       let url = state.seletedData.address
-      QRCode.toCanvas(canvas, url, function (error) {
+      QRCode.toCanvas(canvas, url, function (error:any) {
         if (error) {
           console.error(error)
         } else {
@@ -569,42 +575,13 @@ export default {
 
 
 <style lang="scss" scoped>
-// .van-nav-bar{
-//   // font-size: 18px!important; 
-//   /* 设置导航栏的渐变色 */
-//   // background: linear-gradient(to right, #ff2e29, #fe6e49)!important;
-//   // background: -webkit-linear-gradient(to right, #ff2e29, #fe6e49)!important;  
-//     border:0;
-  
-// }  
-// /* .van-icon-arrow-left {
-//     color: #0000;
-//   } */
-
-//   :deep() {
-//   .van-nav-bar {
-//     &__arrow {
-//       font-size: 18px;
-//       color:  
-//       #ffc0cb
-//       // --cp-primary
-//     }
-//     &__text {
-//       font-size: 15px;
-//       color: #999999;
-//     }
-//   }
-// }
-// .van-hairline--bottom::after {
-//      /* 去除导航栏底部的白色横线 */
-//     border-bottom-width: 0px!important;
-// } 
-.rechargeOperate {
-  width: 100%;
+ .rechargeOperate {
+  // width: 100%;
   // height: 100%;
-  min-height: 100%;
+  // min-height: 100%;
   background: #F3F5F9;
-
+  width: 100%;
+  height: 100%;
   .biaoti {
     float: left;
     // flex: 1;
@@ -642,8 +619,8 @@ export default {
     }
 
     .xuanzhong {
-      color: #1552F0;
-      border: 1px solid #1552F0;
+      color: var(--cp-primary);
+      border: 1px solid var(--cp-primary);
     }
 
     .xuanzhong-img {
@@ -724,7 +701,7 @@ export default {
     .tijiao2{
       width: 100%;
       height: 44px;
-      background: #1552F0;
+      background: var(--cp-primary);
       border-radius: 4px;
       font-style: normal;
       font-weight: 400;
@@ -747,6 +724,7 @@ export default {
 }
 }
 </style>
+
 <style>
 .recharge.van-uploader__upload{
   width: 120px!important;

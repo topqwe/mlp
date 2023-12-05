@@ -24,7 +24,7 @@
 
         <div class="fnexiang-flex">
           <div class="yang1">{{ $t('一级') }} / {{ $t('二级') }}</div>
-          <div class="yang2" style="color:#1552F0;"> {{ (data.rebate1*100).toFixed(1) }}% / {{ (data.rebate2*100).toFixed(1) }}%</div>
+          <div class="yang2" style="color:var(--cp-primary);"> {{ (data.rebate1*100).toFixed(1) }}% / {{ (data.rebate2*100).toFixed(1) }}%</div>
         </div>
         <div class="fnexiang-flex">
           <div class="yang1">{{ $t('邀请码') }}</div>
@@ -326,7 +326,7 @@ export default defineComponent({
 
         /* 审核中 */
 
-        color: #1552F0;
+        color: var(--cp-primary);
       }
     }
     .wenben1{
@@ -347,7 +347,7 @@ export default defineComponent({
 
         /* 审核中 */
 
-        color: #1552F0;
+        color: var(--cp-primary);
       }
     }
 
@@ -379,7 +379,7 @@ export default defineComponent({
     font-size: 16px;
     line-height: 44px;
     text-align: center;
-    background: #1552F0;
+    background: var(--cp-primary);
     border-radius: 4px;
     /* identical to box height */
 

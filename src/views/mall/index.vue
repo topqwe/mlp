@@ -381,7 +381,7 @@ for (var i = 0; i < 3; i++) {
     margin-top: 10px;
     width: 100%;
     height: 86px;
-    background: pink;
+    background: var(--cp-primary);
     padding: 15px;
     box-sizing: border-box;
     border-radius: 4px;
@@ -402,7 +402,7 @@ for (var i = 0; i < 3; i++) {
       font-weight: 400;
       font-size: 12px;
       line-height: 26px;
-      color: pink;//#1552F0
+      color: var(--cp-primary);//var(--cp-primary)
     }
     .yu-e{
       display: flex;
@@ -464,7 +464,7 @@ for (var i = 0; i < 3; i++) {
 
           /* 主题色 */
 
-          color: #1552F0;
+          color: var(--cp-primary);
         }
         .t2{
           margin-left: 5px;

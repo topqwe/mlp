@@ -164,7 +164,7 @@ export default {
 
       /* 主题色 */
 
-      color: #1552F0;
+      color: var(--cp-primary);
       span{
         font-style: normal;
         font-weight: 400;
@@ -223,7 +223,7 @@ export default {
     .button{
       width: 100%;
       height: 100%;
-      background: #1552F0;
+      background: var(--cp-primary);
       border-radius: 4px;
       font-weight: 400;
       font-size: 16px;

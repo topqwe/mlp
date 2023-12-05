@@ -42,12 +42,14 @@ import i18n  from './i18n'
 import 'lib-flexible/flexible' 
 import "./utils/rem" 
 
-import '@/assets/css/element-variables.scss';
+// import '@/assets/css/element-variables.scss';
+import './styles/main.scss'
+
 const app = createApp(App)
 
 app.config.globalProperties.$store = useStore();
 app.config.globalProperties.$router = useRouter();
-app.config.globalProperties.$router= useRoute();
+app.config.globalProperties.$route= useRoute();
 
 app
 .use(router)

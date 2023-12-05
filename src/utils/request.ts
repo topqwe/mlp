@@ -43,7 +43,7 @@ const service = axios.create({
 
 // 发起请求之前的拦截器
 service.interceptors.request.use(
-  config => {
+  (config) => {
     // showToast(config.baseURL)
     // 如果有token 就携带tokon accessToken //不要随便加，但是入参可以随便加
     // const token = window.localStorage.getItem("token");
@@ -59,6 +59,9 @@ service.interceptors.request.use(
     }
     if (localStorage.getItem('token')) {
       config.params['token'] = localStorage.getItem('token')
+      // if ( config.headers) {
+      //   config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
+      // }
     }
     if (window.localStorage.getItem('language')=='en_US'){
       config.params['lang'] = 'en'

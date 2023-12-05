@@ -4,7 +4,7 @@
     <div class="view"></div> 
     <div class="posi_content">
 
-    <van-tabbar v-model="active" :border="false" active-color='pink' inactive-color="grey" @change="onChange" route> 
+    <van-tabbar v-model="active" :border="false" active-color='var(--cp-primary)' inactive-color="grey" @change="onChange" route> 
 
   <van-tabbar-item replace to='/home' badge="3">
     <span>{{ $t('首页') }}</span>
@@ -168,7 +168,7 @@ export default{
 .view {
   height: .5px;
   width: 100%;
-  background: pink;
+  background: var(--cp-primary);
   position: absolute;
   top: 0;
 }

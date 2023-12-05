@@ -8,7 +8,7 @@
       />  -->
       <!-- //会滚没的 -->
 
-      <van-sticky>
+      <!-- <van-sticky> -->
         <!-- "$t('')" -->
         <!-- <van-nav-bar :title="title" :left-arrow="isleftarrow" @click-left="onClickLeft" /> -->
   
@@ -22,12 +22,11 @@
       @click-left="onClickLeft"
       safe-area-inset-top
       z-index="999"
-    />
-    <!-- <slot name="title"></slot> -->
-    <!-- <div slot="title">{{NavBarTitle}}</div> -->
-  <!-- </van-nav-bar> -->
+    >
+    <!-- <slot name="right"></slot> -->
+  </van-nav-bar>
 
-   </van-sticky>
+   <!-- </van-sticky> -->
 
       <!-- <div style="width: 100%;height: 46px;"></div> -->
    
@@ -35,10 +34,13 @@
 </template>
   
 <script lang="ts"> 
+import {defineEmits,defineComponent} from 'vue'
 import { useRouter } from "vue-router";
 import { showToast,showLoadingToast,
       showSuccessToast,showFailToast } from 'vant';
   export default {
+    
+  
       name: 'vnavibar',
       // components: { 
            
@@ -55,7 +57,7 @@ import { showToast,showLoadingToast,
           default:''
         }
       },
-      setup(){
+      setup(props,ctx){
         const router = useRouter();
 
         const onClickLeft  = () =>{
@@ -72,8 +74,17 @@ import { showToast,showLoadingToast,
       // this.$route.replace('/') 
     }
 
-    const onClickRight= () =>{
-      showToast('Right返回');
+//     const emit = defineEmits<{
+//   (e: 'click-right'): void
+// }>()
+
+// 2. 使用emit函数来触发自定义事件（点击右侧文字按钮）
+const onClickRight = () => {
+   ctx.emit('click-right') 
+}
+
+    // const onClickRight= () =>{
+    //   showToast('Right返回');
       // console.log(this.$i18n.locale)
       // history.go(-1) 
       // 判断历史记录中是否有回退
@@ -83,9 +94,9 @@ import { showToast,showLoadingToast,
   //   router.push('/')
   // }
       // this.$route.replace('/') 
-    }
+    // }
  
-        return{ 
+        return{  
           onClickLeft,
           onClickRight
         }
@@ -143,18 +154,20 @@ import { showToast,showLoadingToast,
   .van-nav-bar {
     &__arrow {
       font-size: 18px;
-      color:  
-      #ffc0cb
+      color: var(--cp-primary)
+      // #ffc0cb
       // --cp-primary
     }
     &__text {
       font-size: 15px;
-      color: #999999;
+      color: var(--cp-primary);
     }
   }
 }
-.van-hairline--bottom::after {
-     /* 去除导航栏底部的白色横线 */
-    border-bottom-width: 0px!important;
-} 
+
+
+// .van-hairline--bottom::after {
+//      /* 去除导航栏底部的白色横线 */
+//     border-bottom-width: 0px!important;
+// } 
 </style>
