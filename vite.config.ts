@@ -1,3 +1,9 @@
+// .gitignore
+// node_modules
+// .DS_Store
+// dist
+// dist-ssr
+// *.local
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 //命令：npm install -D unplugin-auto-import unplugin-vue-components
