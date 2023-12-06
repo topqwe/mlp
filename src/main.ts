@@ -39,7 +39,7 @@ import 'element-plus/dist/index.css'
 
 import i18n  from './i18n' 
 
-import 'lib-flexible/flexible' 
+// import 'lib-flexible/flexible' 
 import "./utils/rem" 
 
 // import '@/assets/css/element-variables.scss';

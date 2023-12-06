@@ -228,11 +228,11 @@ export default router;
 router.beforeEach((to, from, next) => {
   console.log({ to, from })
   /*路由发生改变修改页面的title */
-  if (to.meta.title) {
-	document.title = to.meta.title.toString()
-  }else{
+  // if (to.meta.title) {
+	// document.title = to.meta.title.toString()
+  // }else{
 	document.title = "小鱼"
-  } 
+  // } 
   //白名单
   if (to.path === '/register')  next()
   if (to.path === '/customerService')  next()

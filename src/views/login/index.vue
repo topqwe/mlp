@@ -44,6 +44,7 @@
             value=""
             maxlength="20" 
             v-model="textField.input1"
+            clearable
             >
         </el-input>
       </div>
@@ -54,6 +55,8 @@
             maxlength="20"
             v-model="textField.input2" 
             type="password" 
+            show-password
+            clearable
             >
         </el-input>
       </div>

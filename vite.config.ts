@@ -4,6 +4,14 @@
 // dist
 // dist-ssr
 // *.local
+
+// npm i --save-dev @types/node
+
+// "lib-flexible": "^0.3.2",
+// "moment": "^2.29.1",
+// "path": "^0.12.7",
+// "@element-plus/icons": "^0.0.11",
+// "@element-plus/icons-vue": "^1.1.3",
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 //命令：npm install -D unplugin-auto-import unplugin-vue-components
