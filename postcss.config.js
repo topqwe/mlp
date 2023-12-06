@@ -18,5 +18,16 @@ module.exports = {
       // //忽略一些文件，不进行转换，比如我想忽略 依赖的UI框架
       // exclude: ['node_modules']
     }
+
+//tabBar 放大后显示不全的问题
+    // 'postcss-px-to-viewport-8-plugin': {
+    //   viewportWidth: 375,  // 视口的宽度，对应设计稿的宽度
+    //   unitPrecision: 3,     // 转换后的精度，即保留几位小数
+    //   minPixelValue: 1,     // 最小的转换数值，小于该值不进行转换
+    //   viewportUnit: 'vw',   // 转换的单位，建议使用 vw
+    //   selectorBlackList: ['.ignore', '.hairlines'], // 不进行转换的类名
+    //   exclude: [/node_modules/]
+    // }
+
   }
 }
