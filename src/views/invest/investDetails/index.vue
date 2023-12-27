@@ -86,7 +86,7 @@ export default {
 'id':0,
 'prize':90091,'progress':0.08,'isSellOut':1,
 'iconImg':
-'https://cn.vuejs.org/assets/lifecycle.16e4c08e.png',
+'https://cn.vuejs.org/assets/lifecycle.DLmSwRQE.png',
 },
 {
         'content':'abcdfgdfdgdgdgd',
@@ -94,7 +94,7 @@ export default {
 'id':1,
 'prize':90092,'progress':0.9,'isSellOut':0,
 'iconImg':
-'https://cn.vuejs.org/assets/lifecycle.16e4c08e.png',
+'https://cn.vuejs.org/assets/lifecycle.DLmSwRQE.png',
 }
 
       ]
@@ -109,7 +109,7 @@ for (var i = 0; i < 3; i++) {
       'id':i,
       'prize':9009+i,'progress':i===0?0.18:0.9,'isSellOut':i,
       'iconImg':
-      'https://cn.vuejs.org/assets/lifecycle.16e4c08e.png',
+      'https://cn.vuejs.org/assets/lifecycle.DLmSwRQE.png',
   }
   customList.push(vv)
 }

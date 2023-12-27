@@ -255,7 +255,7 @@ export default {
       requestUploadFile(formData).then((res: any) => {
           // showToast('dgdgdf'+res.message)
           closeToast()
-          state.picUrl = 'https://cn.vuejs.org/assets/lifecycle.16e4c08e.png'
+          state.picUrl = 'https://cn.vuejs.org/assets/lifecycle.DLmSwRQE.png'
           // state.picUrl = res
 
     })

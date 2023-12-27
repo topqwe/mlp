@@ -138,7 +138,7 @@ export default {
           'id':i,
           'prize':9009+i,'progress':i===0?0.18:0.9,'isSellOut':i,
           'iconImg':
-          'https://cn.vuejs.org/assets/lifecycle.16e4c08e.png',
+          'https://cn.vuejs.org/assets/lifecycle.DLmSwRQE.png',
       }
       customList.push(vv)
     }
