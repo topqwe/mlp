@@ -9,42 +9,42 @@
   <van-tabbar-item replace to='/home' badge="3">
     <span>{{ $t('首页') }}</span>
     <template #icon="props">
-      <img class="imgitem" :src="props.active ? icon0.active : icon0.inactive" />
+      <img class="imgitem" :src="getImagePath(props.active ? icon0.active : icon0.inactive)" />
     </template>
   </van-tabbar-item>
   
   <van-tabbar-item replace to='/invest' badge="1">
     <span>{{ $t('投资') }}</span>
     <template #icon="props">
-      <img class="imgitem" :src="props.active ? icon1.active : icon1.inactive" />
+      <img class="imgitem" :src="getImagePath(props.active ? icon1.active : icon1.inactive)" />
     </template>
   </van-tabbar-item>
 
   <van-tabbar-item replace to='/mall' badge="">
     <span>{{ $t('商城') }}</span>
     <template #icon="props">
-      <img class="imgitem" :src="props.active ? icon2.active : icon2.inactive" />
+      <img class="imgitem" :src="getImagePath(props.active ? icon2.active : icon2.inactive)" />
     </template>
   </van-tabbar-item>
   
   <van-tabbar-item replace to='/task' badge="">
     <span>{{ $t('任务') }}</span>
     <template #icon="props">
-      <img class="imgitem" :src="props.active ? icon3.active : icon3.inactive" />
+      <img class="imgitem" :src="getImagePath(props.active ? icon3.active : icon3.inactive)" />
     </template>
   </van-tabbar-item>
 
   <van-tabbar-item replace to='/introduceweb' badge="">
     <span>{{ $t('介绍') }}</span>
     <template #icon="props">
-      <img class="imgitem" :src="props.active ? icon3.active : icon3.inactive" />
+      <img class="imgitem" :src="getImagePath(props.active ? icon4.active : icon4.inactive)" />
     </template>
   </van-tabbar-item>
 
   <van-tabbar-item replace to='/me' badge="">
     <span>{{ $t('我的') }}</span>
     <template #icon="props">
-      <img class="imgitem" :src="props.active ? icon4.active : icon4.inactive" />
+      <img class="imgitem" :src="getImagePath(props.active ? icon5.active : icon5.inactive)" />
     </template>
   </van-tabbar-item>
 
@@ -80,39 +80,44 @@ export default{
             
             active:0,
             icon0: {
-      active: '/src/assets/image/bottom/home2.png',
+      active: 'home2',
       inactive:
-        '/src/assets/image/bottom/home.png',
+        'home',
     },
     icon1: {
-      active: '/src/assets/image/bottom/chongzhi2.png',
+      active: 'chongzhi2',
       inactive:
-        '/src/assets/image/bottom/chongzhi.png',
+        'chongzhi',
     },
     icon2: {
-      active: '/src/assets/image/bottom/renwu2.png',
+      active: 'renwu2',
       inactive:
-        '/src/assets/image/bottom/renwu.png',
+        'renwu',
     },
     icon3: {
-      active: '/src/assets/image/bottom/introduce2.png',
+      active: 'introduce2',
       inactive:
-        '/src/assets/image/bottom/introduce.png',
+        'introduce',
     },
     icon4: {
-      active: '/src/assets/image/bottom/introduce2.png',
+      active: 'introduce2',
       inactive:
-        '/src/assets/image/bottom/introduce.png',
+        'introduce',
     },
     icon5: {
-      active: '/src/assets/image/bottom/wode2.png',
+      active: 'wode2',
       inactive:
-        '/src/assets/image/bottom/wode.png',
+        'wode',
     }
         });
+
+        const getImagePath =(name:string)=>{
+      return new URL(`/src/assets/image/bottom/${name}.png`, import.meta.url).href
+    }
         return{
             onChange,
-            ...toRefs(state)
+            ...toRefs(state),
+            getImagePath
         }
     }
 
